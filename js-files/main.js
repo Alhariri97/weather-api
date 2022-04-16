@@ -20,7 +20,7 @@ async function getagain() {
         document.getElementById("output").innerHTML += `
       <div class="col-5 data">
       <span id="del" class="del">Delete </span>
-        <h2>City: ${dataWether.name}, ${dataWether.sys.country}</h2>.
+        <h2>City: ${dataWether.name}, ${dataWether.sys.country}</h2>
         <p>${dataWether.weather[0].main}</p>
         <p>Current Temp in ${dataWether.name} is ${temp}&#8451;, it feels like ${feels}&#8451; , <span> The Max Temp is ${max}&#8451; </apan>, and <span> The Min Temp is ${min}&#8451;</apan></p>
         <p></p>
@@ -49,25 +49,15 @@ document.addEventListener("click", (e) => {
 });
 
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
-// btn.onclick =
 function show() {
   modal.style.display = "block";
 }
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
